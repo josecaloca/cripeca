@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CRIPECA | Ingeniería hidráulica y civil en Caracas</title>
+<meta name="description" content="CRIPECA: limpieza de tanques subterráneos y aéreos, sistemas hidroneumáticos y plantas de tratamiento de agua en Caracas. Dirigida por el Ing. Juan Caloca, más de 30 años de experiencia. Solicita tu cotización por WhatsApp.">
+<style>
+:root{
+  --azul:#0b3c5d; --azul2:#1d6fa5; --agua:#e8f4fb; --texto:#1c2a35; --gris:#5b6b78; --verde:#25d366;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--texto);line-height:1.6;background:#fff}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e3ebf1;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:1.4rem;letter-spacing:.06em;color:var(--azul)}
+.logo span{color:var(--azul2)}
+nav a{margin-left:20px;font-size:.95rem;color:var(--gris)}
+nav a:hover{color:var(--azul)}
+.btn{display:inline-block;background:var(--verde);color:#062b14;font-weight:700;padding:14px 26px;border-radius:999px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.sec{background:transparent;border:2px solid #fff;color:#fff}
+.hero{background:linear-gradient(135deg,var(--azul),var(--azul2));color:#fff;padding:84px 0 92px}
+.hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;max-width:760px}
+.hero p{margin:18px 0 30px;max-width:620px;font-size:1.1rem;opacity:.92}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+section{padding:64px 0}
+section h2{font-size:clamp(1.5rem,3.5vw,2.1rem);color:var(--azul);margin-bottom:10px}
+.lead{color:var(--gris);max-width:680px;margin-bottom:34px}
+.alt{background:var(--agua)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;border:1px solid #dbe8f0;border-radius:14px;padding:26px}
+.card h3{color:var(--azul);margin-bottom:8px;font-size:1.15rem}
+.card ul{margin-left:18px;color:var(--gris);font-size:.95rem}
+.ico{font-size:1.8rem;margin-bottom:10px}
+
+/* Ing. Caloca */
+.ing{display:grid;grid-template-columns:260px 1fr;gap:34px;align-items:start}
+.foto{aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,var(--azul),var(--azul2));position:relative;display:flex;align-items:center;justify-content:center;color:#fff;font-size:3.4rem;font-weight:800;letter-spacing:.05em}
+.foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ing h3{font-size:1.5rem;color:var(--azul)}
+.cargo{color:var(--azul2);font-weight:600;margin:2px 0 14px}
+.ing p{color:var(--gris);margin-bottom:12px}
+.cred{margin:16px 0 0;list-style:none}
+.cred li{padding:8px 0 8px 30px;position:relative;color:var(--texto);border-bottom:1px solid #e3ebf1}
+.cred li:before{content:"✔";position:absolute;left:0;color:var(--azul2);font-weight:700}
+@media(max-width:760px){.ing{grid-template-columns:1fr}.foto{max-width:220px}}
+
+/* indicadores */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:34px}
+.stat{background:#fff;border:1px solid #dbe8f0;border-radius:14px;padding:22px;text-align:center}
+.stat b{display:block;font-size:2rem;color:var(--azul2);line-height:1.1}
+.stat span{font-size:.92rem;color:var(--gris)}
+.por{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.por div{background:#fff;border-radius:12px;padding:20px;border:1px solid #dbe8f0}
+.por b{display:block;font-size:1.02rem;color:var(--azul);margin-bottom:4px}
+.por p{color:var(--gris);font-size:.93rem}
+
+.galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.galeria figure{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#cfe3f0;position:relative;display:flex;align-items:center;justify-content:center;color:var(--azul);font-size:.9rem;text-align:center;padding:10px}
+.galeria img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.galeria figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 11px;background:linear-gradient(to top,rgba(11,60,93,.88),rgba(11,60,93,0));color:#fff;font-size:.88rem;font-weight:600;text-align:left}
+.galeria .ph{position:relative;z-index:0}
+
+/* casos */
+.casos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.caso{background:#fff;border:1px solid #dbe8f0;border-radius:14px;overflow:hidden}
+.caso .img{aspect-ratio:16/10;position:relative;background:#dcecf6}
+.caso .img svg,.caso .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.caso .txt{padding:20px 22px 24px}
+.caso h3{color:var(--azul);font-size:1.08rem;margin-bottom:6px}
+.caso p{color:var(--gris);font-size:.94rem}
+
+/* artículos */
+.arts{display:grid;gap:14px;max-width:820px}
+details.art{background:#fff;border:1px solid #dbe8f0;border-radius:14px;padding:0 24px}
+details.art summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:700;color:var(--azul);font-size:1.08rem;display:flex;justify-content:space-between;gap:14px;align-items:center}
+details.art summary::-webkit-details-marker{display:none}
+details.art summary:after{content:"+";font-size:1.6rem;color:var(--azul2);line-height:1}
+details.art[open] summary:after{content:"–"}
+.art .tag{display:block;font-size:.78rem;font-weight:600;color:var(--azul2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px}
+.art .body{padding:0 0 22px;color:var(--texto)}
+.art .body p{margin-bottom:12px;color:#34444f}
+.art .body ul{margin:0 0 12px 20px;color:#34444f}
+.art .fuentes{font-size:.85rem;color:var(--gris);border-top:1px solid #e3ebf1;padding-top:12px}
+.art .fuentes a{color:var(--azul2);text-decoration:underline}
+.nota{max-width:820px;margin-top:18px;font-size:.85rem;color:var(--gris)}
+
+.cta{background:var(--agua);border:1px solid #cfe3f0;border-radius:16px;padding:30px;text-align:center;margin-top:38px}
+.cta h3{color:var(--azul);font-size:1.35rem;margin-bottom:6px}
+.cta p{color:var(--gris);margin-bottom:18px}
+
+.contacto{background:var(--azul);color:#fff;text-align:center}
+.contacto h2{color:#fff}
+.contacto p{max-width:600px;margin:0 auto 26px;opacity:.92}
+.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:860px;margin:0 auto 30px;text-align:left}
+.pasos div{background:rgba(255,255,255,.1);border-radius:12px;padding:18px}
+.pasos b{display:block;margin-bottom:4px}
+.pasos span{font-size:.92rem;opacity:.9}
+footer{padding:26px 0;text-align:center;font-size:.85rem;color:var(--gris)}
+.flotante{position:fixed;right:18px;bottom:18px;background:var(--verde);width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:20}
+@media(max-width:640px){nav a.h{display:none}.hero{padding:56px 0 64px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="logo">CRI<span>PECA</span></a>
+    <nav>
+      <a class="h" href="#servicios">Servicios</a>
+      <a class="h" href="#nosotros">Nosotros</a>
+      <a class="h" href="#articulos">Artículos</a>
+      <a href="https://wa.me/584241619729?text=Hola%20CRIPECA%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n" style="color:var(--azul);font-weight:700">Cotizar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="wrap">
+      <h1>Agua limpia y sistemas hidráulicos confiables para tu edificio</h1>
+      <p>Somos CRIPECA, equipo de ingeniería hidráulica y civil en Caracas, dirigido por el Ing. Juan Caloca. Limpieza de tanques, sistemas hidroneumáticos y plantas de tratamiento de agua, con respaldo profesional.</p>
+      <div class="btns">
+        <a class="btn" href="https://wa.me/584241619729?text=Hola%20CRIPECA%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n">Solicitar cotización por WhatsApp</a>
+        <a class="btn sec" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <h2>Nuestros servicios</h2>
+      <p class="lead">Soluciones completas de ingeniería hidráulica para edificios, conjuntos residenciales, comercios e industrias.</p>
+      <div class="grid">
+        <div class="card"><div class="ico">🛢️</div><h3>Limpieza de tanques</h3>
+          <ul><li>Tanques subterráneos</li><li>Tanques aéreos</li><li>Desinfección y mantenimiento</li><li>Para edificios y conjuntos residenciales</li></ul></div>
+        <div class="card"><div class="ico">⚙️</div><h3>Sistemas hidroneumáticos</h3>
+          <ul><li>Instalación</li><li>Mantenimiento preventivo y correctivo</li><li>Reparación y reemplazo de equipos</li><li>Diagnóstico de presión y bombeo</li></ul></div>
+        <div class="card"><div class="ico">💧</div><h3>Plantas de tratamiento de agua</h3>
+          <ul><li>Tratamiento de aguas limpias</li><li>Tratamiento de aguas residuales</li><li>Operación y mantenimiento</li><li>Mejora de plantas existentes</li></ul></div>
+        <div class="card"><div class="ico">🔧</div><h3>Ingeniería hidráulica</h3>
+          <ul><li>Redes de agua y tuberías</li><li>Evaluación técnica de instalaciones</li><li>Proyectos y asesoría especializada</li></ul></div>
+        <div class="card"><div class="ico">🏗️</div><h3>Ingeniería civil</h3>
+          <ul><li>Obras civiles asociadas a sistemas de agua</li><li>Construcción y rehabilitación de cuartos de bombas y tanques</li></ul></div>
+      </div>
+      <div class="cta">
+        <h3>¿Necesitas un servicio para tu edificio?</h3>
+        <p>Cuéntanos tu caso por WhatsApp y te preparamos una cotización.</p>
+        <a class="btn" href="https://wa.me/584241619729?text=Hola%20CRIPECA%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n">Cotizar ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="nosotros">
+    <div class="wrap">
+      <h2>Tu edificio, en buenas manos</h2>
+      <p class="lead">Detrás de CRIPECA hay más de tres décadas de ingeniería aplicada al agua. Cada trabajo se planifica y supervisa bajo la dirección de nuestro ingeniero principal.</p>
+      <div class="ing">
+        <div class="foto">JC<img src="images/juan-caloca.jpg" alt="Ing. Juan Caloca, CEO de CRIPECA" onerror="this.remove()"></div>
+        <div>
+          <h3>Ing. Juan Caloca</h3>
+          <div class="cargo">Ingeniero principal y CEO de CRIPECA</div>
+          <p>Ingeniero hidráulico con más de 30 años de trayectoria en ingeniería civil e hidráulica. Ha ejecutado grandes obras en distintas regiones del país y ha dirigido equipos técnicos y de campo, llevando esa experiencia a cada proyecto de CRIPECA, desde la limpieza de un tanque hasta una planta de tratamiento.</p>
+          <p>Además de su práctica profesional, es profesor de la Universidad Central de Venezuela (UCV), una combinación de experiencia en obra y rigor técnico que se refleja en la forma en que diagnosticamos, proponemos y ejecutamos.</p>
+          <ul class="cred">
+            <li>Más de 30 años de experiencia en ingeniería civil e hidráulica</li>
+            <li>Grandes obras de ingeniería ejecutadas a lo largo del territorio nacional</li>
+            <li>Experiencia en la dirección y coordinación de equipos de trabajo</li>
+            <li>Profesor de la Universidad Central de Venezuela (UCV)</li>
+            <li>Un solo equipo profesional para ingeniería hidráulica y civil</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calidad">
+    <div class="wrap">
+      <h2>Indicadores de calidad</h2>
+      <p class="lead">Lo que respalda nuestro trabajo y la forma en que lo hacemos.</p>
+      <div class="stats">
+        <div class="stat"><b>+30</b><span>años de experiencia del ingeniero principal</span></div>
+        <div class="stat"><b>Nacional</b><span>obras ejecutadas en todo el territorio</span></div>
+        <div class="stat"><b>UCV</b><span>docencia universitaria en ingeniería</span></div>
+        <div class="stat"><b>2 áreas</b><span>ingeniería hidráulica y civil en un mismo equipo</span></div>
+      </div>
+      <div class="por">
+        <div><b>Evaluación técnica previa</b><p>Revisamos las instalaciones antes de proponer el trabajo.</p></div>
+        <div><b>Procedimientos claros</b><p>Te explicamos qué se hará, cómo y en qué orden.</p></div>
+        <div><b>Cuidado de las instalaciones</b><p>Trabajamos procurando minimizar las molestias a los residentes.</p></div>
+        <div><b>Mantenimiento preventivo</b><p>Te orientamos para planificar labores futuras y evitar fallas.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="trabajos">
+    <div class="wrap">
+      <h2>Trabajos realizados</h2>
+      <p class="lead">Una muestra de nuestro trabajo en campo.</p>
+      <div class="galeria">
+                <figure><span class="ph">Limpieza de tanque subterráneo</span><img src="images/trabajo-1.jpg" alt="Limpieza de tanque subterráneo en Caracas" loading="lazy" onerror="this.remove()"><figcaption>Limpieza de tanque subterráneo</figcaption></figure>
+        <figure><span class="ph">Tanque aéreo en edificio</span><img src="images/trabajo-2.jpg" alt="Mantenimiento de tanque aéreo" loading="lazy" onerror="this.remove()"><figcaption>Tanque aéreo en edificio</figcaption></figure>
+        <figure><span class="ph">Sistema hidroneumático</span><img src="images/trabajo-3.jpg" alt="Sistema hidroneumático instalado" loading="lazy" onerror="this.remove()"><figcaption>Sistema hidroneumático</figcaption></figure>
+        <figure><span class="ph">Planta de tratamiento de agua</span><img src="images/trabajo-4.jpg" alt="Planta de tratamiento de agua" loading="lazy" onerror="this.remove()"><figcaption>Planta de tratamiento de agua</figcaption></figure>
+        <figure><span class="ph">Equipo y sistema de bombeo</span><img src="images/trabajo-5.jpg" alt="Equipo y sistema de bombeo" loading="lazy" onerror="this.remove()"><figcaption>Equipo y sistema de bombeo</figcaption></figure>
+        <figure><span class="ph">Nuestro equipo en obra</span><img src="images/trabajo-6.jpg" alt="Equipo CRIPECA en obra" loading="lazy" onerror="this.remove()"><figcaption>Nuestro equipo en obra</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="casos">
+    <div class="wrap">
+      <h2>Casos de trabajo</h2>
+      <p class="lead">Los tipos de proyecto que atendemos con más frecuencia en edificios y conjuntos residenciales de Caracas.</p>
+      <div class="casos">
+        <article class="caso">
+          <div class="img">
+            <svg viewBox="0 0 320 200" role="img" aria-label="Ilustración de tanque de agua">
+              <rect width="320" height="200" fill="#dcecf6"/>
+              <rect x="90" y="40" width="140" height="120" rx="10" fill="#fff" stroke="#0b3c5d" stroke-width="4"/>
+              <path d="M94 105 q18 -12 36 0 t36 0 t36 0 t24 0 V152 a6 6 0 0 1 -6 6 H100 a6 6 0 0 1 -6 -6z" fill="#1d6fa5" opacity=".85"/>
+              <rect x="150" y="20" width="20" height="22" fill="#0b3c5d"/>
+              <circle cx="125" cy="130" r="5" fill="#fff" opacity=".7"/><circle cx="195" cy="138" r="4" fill="#fff" opacity=".7"/>
+            </svg>
+            <img src="images/caso-1.jpg" alt="Limpieza de tanques en edificio residencial" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="txt">
+            <h3>Limpieza de tanques subterráneos y aéreos</h3>
+            <p>Limpieza y desinfección de tanques de almacenamiento en edificios residenciales, coordinando el trabajo para minimizar las molestias a los residentes.</p>
+          </div>
+        </article>
+        <article class="caso">
+          <div class="img">
+            <svg viewBox="0 0 320 200" role="img" aria-label="Ilustración de sistema hidroneumático">
+              <rect width="320" height="200" fill="#dcecf6"/>
+              <rect x="40" y="110" width="110" height="46" rx="8" fill="#0b3c5d"/>
+              <circle cx="75" cy="133" r="14" fill="#1d6fa5"/><circle cx="75" cy="133" r="5" fill="#fff"/>
+              <rect x="170" y="52" width="60" height="104" rx="30" fill="#fff" stroke="#0b3c5d" stroke-width="4"/>
+              <path d="M174 110 H226 V126 a22 22 0 0 1 -22 22 h-8 a22 22 0 0 1 -22 -22z" fill="#1d6fa5" opacity=".85"/>
+              <path d="M150 133 H170 M230 90 H280 V60" fill="none" stroke="#0b3c5d" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="262" cy="52" r="14" fill="#fff" stroke="#0b3c5d" stroke-width="4"/><path d="M262 52 l7 -6" stroke="#1d6fa5" stroke-width="3"/>
+            </svg>
+            <img src="images/caso-2.jpg" alt="Sistema hidroneumático en edificio" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="txt">
+            <h3>Mejora e instalación de sistemas hidroneumáticos</h3>
+            <p>Diagnóstico de presión y bombeo, mantenimiento, reparación y reemplazo de equipos para lograr un suministro de agua estable en el edificio.</p>
+          </div>
+        </article>
+        <article class="caso">
+          <div class="img">
+            <svg viewBox="0 0 320 200" role="img" aria-label="Ilustración de instalación hidráulica">
+              <rect width="320" height="200" fill="#dcecf6"/>
+              <path d="M30 120 H130 V70 H210 V120 H290" fill="none" stroke="#0b3c5d" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M30 120 H130 V70 H210 V120 H290" fill="none" stroke="#1d6fa5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="120" y="108" width="20" height="24" rx="4" fill="#fff" stroke="#0b3c5d" stroke-width="3"/>
+              <rect x="200" y="108" width="20" height="24" rx="4" fill="#fff" stroke="#0b3c5d" stroke-width="3"/>
+              <path d="M160 150 q10 18 0 28 q-10 -10 0 -28z" fill="#1d6fa5"/>
+            </svg>
+            <img src="images/caso-3.jpg" alt="Mantenimiento de instalaciones hidráulicas" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="txt">
+            <h3>Tratamiento y mantenimiento de instalaciones hidráulicas</h3>
+            <p>Revisión, tratamiento y mantenimiento de redes y sistemas de agua del edificio, con recomendaciones para planificar labores preventivas.</p>
+          </div>
+        </article>
+        <article class="caso">
+          <div class="img">
+            <svg viewBox="0 0 320 200" role="img" aria-label="Ilustración de servicio integral de agua">
+              <rect width="320" height="200" fill="#dcecf6"/>
+              <rect x="40" y="40" width="70" height="60" rx="8" fill="#fff" stroke="#0b3c5d" stroke-width="4"/>
+              <path d="M44 74 q10 -8 20 0 t20 0 t22 0 V94 H44z" fill="#1d6fa5" opacity=".85"/>
+              <rect x="200" y="100" width="80" height="46" rx="8" fill="#0b3c5d"/><circle cx="225" cy="123" r="12" fill="#1d6fa5"/>
+              <rect x="240" y="40" width="40" height="56" rx="20" fill="#fff" stroke="#0b3c5d" stroke-width="4"/>
+              <path d="M110 70 H160 V123 H200 M280 68 V100" fill="none" stroke="#0b3c5d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M70 130 q12 22 0 34 q-12 -12 0 -34z" fill="#1d6fa5"/>
+            </svg>
+            <img src="images/caso-4.jpg" alt="Servicio integral de sistemas de agua" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="txt">
+            <h3>Servicio integral de sistemas de agua</h3>
+            <p>Un solo equipo para coordinar la limpieza de tanques, la mejora del sistema hidroneumático y el mantenimiento de las instalaciones hidráulicas.</p>
+          </div>
+        </article>
+      </div>
+      <p class="nota" style="max-width:none;margin-top:14px">Las ilustraciones son referenciales; las fotos de trabajos reales se muestran al agregarlas en la carpeta de imágenes.</p>
+      <div class="cta">
+        <h3>¿Tu edificio necesita algo parecido?</h3>
+        <p>Cuéntanos tu caso y te preparamos una cotización.</p>
+        <a class="btn" href="https://wa.me/584241619729?text=Hola%20CRIPECA%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n">Cotizar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="articulos">
+    <div class="wrap">
+      <h2>Artículos</h2>
+      <p class="lead">Información breve y práctica sobre el agua en tu edificio, con las fuentes en las que nos basamos.</p>
+      <div class="arts">
+
+        <details class="art">
+          <summary><span><span class="tag">Tanques</span>Por qué conviene limpiar los tanques de agua de tu edificio</span></summary>
+          <div class="body">
+            <p>El tanque es el último lugar por donde pasa el agua antes de llegar a cada apartamento. Si en él se acumulan sedimentos y materia orgánica, el agua que sale ya no es la misma que entró.</p>
+            <p>Un informe presentado ante la ONU por organizaciones de calidad del agua en Venezuela describe cómo la materia orgánica que llega por la red se asienta en tuberías y tanques de las viviendas y allí se descompone, lo que explica quejas por olor, sabor, turbidez y color. Por otro lado, la OMS advierte que los riesgos de salud en los sistemas de agua de edificios, incluidos los bloques de apartamentos, son prevenibles y controlables con un buen diseño y gestión. Los CDC de EE. UU. señalan que un programa de gestión del agua, que incluya control de temperatura y niveles de desinfectante, es la estrategia principal para controlar bacterias como Legionella.</p>
+            <p><b>En la práctica:</b> la limpieza periódica de tanques, subterráneos y aéreos, forma parte de un programa de mantenimiento preventivo. La frecuencia adecuada depende de cada edificio y se define tras una inspección.</p>
+            <div class="fuentes"><b>Fuentes:</b>
+              <a href="https://archivo.provea.org/wp-content/uploads/EPU-Calidad-de-Agua.pdf" target="_blank" rel="noopener">Movimiento por la Calidad del Agua et al., informe EPU–ONU (2011)</a> ·
+              <a href="https://www.who.int/publications/i/item/9789241548106" target="_blank" rel="noopener">OMS, Water safety in buildings</a> ·
+              <a href="https://www.cdc.gov/legionella/water-system-maintenance.html" target="_blank" rel="noopener">CDC, Legionella water system maintenance</a></div>
+          </div>
+        </details>
+
+        <details class="art">
+          <summary><span><span class="tag">Calidad del agua</span>El agua sucia en Caracas: qué han encontrado los estudios</span></summary>
+          <div class="body">
+            <p>En 2019, The New York Times publicó una investigación para la cual investigadores de la UCV analizaron 40 muestras de los principales sistemas de agua de Caracas. Un tercio no cumplió las normas nacionales. En el sistema principal, que abastece cerca del 60 % del agua de la ciudad, más de la mitad de las muestras tenía poco cloro y casi dos tercios superaba los niveles de bacterias permitidos.</p>
+            <p>La investigación también recogió testimonios de gerentes de la compañía de agua sobre abandono de bombas y plantas de tratamiento por falta de fondos y personal capacitado.</p>
+            <p><b>Qué significa para tu edificio:</b> no controlamos lo que llega por la tubería, pero sí lo que ocurre dentro del edificio. Tanques limpios, un buen sistema de bombeo y, cuando corresponde, tratamiento del agua son medidas que están en manos de la comunidad.</p>
+            <p style="font-size:.88rem;color:var(--gris)">Nota: los datos corresponden a 2019. La situación puede variar según la zona y el momento.</p>
+            <div class="fuentes"><b>Fuente:</b>
+              <a href="https://panamaamerica.com.pa/nytimesinternationalweekly/el-agua-de-venezuela-es-un-peligro-para-la-salud-1148129" target="_blank" rel="noopener">Kurmanaev y Herrera, The New York Times (5-nov-2019), republicado por Panamá América</a></div>
+          </div>
+        </details>
+
+        <details class="art">
+          <summary><span><span class="tag">Hidroneumáticos</span>Beneficios de un sistema hidroneumático</span></summary>
+          <div class="body">
+            <p>Un sistema hidroneumático combina bombas con un tanque presurizado que guarda una reserva de agua. Según fabricantes e ingenieros del sector, esto aporta varias ventajas:</p>
+            <ul>
+              <li><b>Presión más estable:</b> el tanque suaviza las variaciones pequeñas de presión, de modo que el equipo no esté oscilando constantemente.</li>
+              <li><b>Respuesta ante picos de consumo:</b> aporta agua mientras la bomba alcanza su velocidad.</li>
+              <li><b>Menos arranques y paradas:</b> los arranques generan calor que daña los bobinados del motor; una referencia de la industria es mantenerse por debajo de 5 o 6 arranques por hora.</li>
+              <li><b>Ahorro de energía:</b> si el equipo permanece apagado más tiempo, consume menos.</li>
+            </ul>
+            <p>Para edificios altos esto se traduce en presión pareja en los pisos superiores y menos desgaste del equipo.</p>
+            <div class="fuentes"><b>Fuentes:</b>
+              <a href="https://prod.xylem.com/siteassets/brand/bell-amp-gossett/resources/white-paper/tanks-and-boosters-white-paper.pdf" target="_blank" rel="noopener">Xylem / Bell &amp; Gossett, Tanks and Boosters (white paper)</a> ·
+              <a href="https://www.deppmann.com/blog/monday-morning-minutes/hydropneumatic-tanks-variable-speed-pressure-boosters-part-2/" target="_blank" rel="noopener">Deppmann, Hydropneumatic Tanks, Part 2</a></div>
+          </div>
+        </details>
+
+        <details class="art">
+          <summary><span><span class="tag">Mejoras</span>Cómo mejorar el funcionamiento de tu hidroneumático</span></summary>
+          <div class="body">
+            <p>Antes de pensar en reemplazar equipos, conviene revisar lo básico. Estos son los puntos que la literatura técnica destaca:</p>
+            <ul>
+              <li><b>Arranques por hora:</b> si la bomba arranca con demasiada frecuencia, el tanque puede estar mal dimensionado o mal cargado.</li>
+              <li><b>Precarga de aire del tanque:</b> debe ajustarse a la presión mínima que requiere el sistema.</li>
+              <li><b>Tamaño del tanque:</b> se calcula según el volumen de agua que debe acumular entre los puntos de arranque y parada de la bomba.</li>
+              <li><b>Bomba adecuada al sistema:</b> el Departamento de Energía de EE. UU. recomienda seleccionar la bomba según los requerimientos reales del sistema, revisar el dimensionamiento de tuberías y mantener el equipo.</li>
+            </ul>
+            <p><b>Recomendación:</b> una evaluación técnica permite identificar si basta con un ajuste, una reparación o si conviene modernizar el equipo.</p>
+            <div class="fuentes"><b>Fuentes:</b>
+              <a href="https://www.deppmann.com/blog/monday-morning-minutes/hydropneumatic-tanks-variable-speed-pressure-boosters-part-2/" target="_blank" rel="noopener">Deppmann, Hydropneumatic Tanks, Part 2</a> ·
+              <a href="https://www.energy.gov/eere/amo/pump-systems" target="_blank" rel="noopener">U.S. Department of Energy, Pump Systems</a></div>
+          </div>
+        </details>
+
+        <details class="art">
+          <summary><span><span class="tag">Automatización</span>Automatizar el bombeo: variadores de frecuencia y control de presión</span></summary>
+          <div class="body">
+            <p>Un variador de frecuencia (VFD) ajusta la velocidad del motor de la bomba según la demanda, en lugar de encenderla y apagarla. Entre sus ventajas están:</p>
+            <ul>
+              <li><b>Ahorro energético:</b> la potencia de una bomba varía con el cubo de su velocidad; reducir la velocidad un 20 % puede disminuir el consumo casi a la mitad.</li>
+              <li><b>Presión constante:</b> mantiene un valor fijo, evitando las fluctuaciones del control tradicional por presostato.</li>
+              <li><b>Menos desgaste:</b> reduce los golpes eléctricos del arranque y el golpe de ariete, lo que baja los costos de mantenimiento.</li>
+            </ul>
+            <p>Combinado con un tanque hidroneumático y controles automáticos, es una forma de modernizar el cuarto de bombas. Los resultados dependen de cada instalación, por lo que conviene evaluarla antes de invertir.</p>
+            <div class="fuentes"><b>Fuentes:</b>
+              <a href="https://www.waterworld.com/home/article/14070091/guest-commentary-the-benefits-of-variable-frequency-drives" target="_blank" rel="noopener">WaterWorld, The benefits of variable frequency drives</a> ·
+              <a href="https://www.energy.gov/eere/amo/pump-systems" target="_blank" rel="noopener">U.S. Department of Energy, Pump Systems</a></div>
+          </div>
+        </details>
+
+      </div>
+      <p class="nota">Estos artículos son informativos y resumen las fuentes citadas. Cada edificio tiene condiciones propias: para decisiones técnicas, solicita una evaluación.</p>
+      <div class="cta">
+        <h3>¿Quieres saber en qué estado está tu sistema?</h3>
+        <p>Escríbenos y coordinamos una evaluación y cotización para tu edificio.</p>
+        <a class="btn" href="https://wa.me/584241619729?text=Hola%20CRIPECA%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n">Pedir cotización</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="wrap">
+      <h2>Solicita tu cotización</h2>
+      <p>Cotizar es fácil y sin compromiso. Atendemos en Caracas y zonas cercanas.</p>
+      <div class="pasos">
+        <div><b>1. Escríbenos</b><span>Toca el botón y abre el chat de WhatsApp.</span></div>
+        <div><b>2. Cuéntanos tu caso</b><span>Tipo de servicio, tipo de edificio y zona.</span></div>
+        <div><b>3. Recibe tu cotización</b><span>Te respondemos con una propuesta para tu edificio.</span></div>
+      </div>
+      <a class="btn" href="https://wa.me/584241619729?text=Hola%20CRIPECA%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n">Escribir por WhatsApp</a>
+      <p style="margin-top:18px">WhatsApp: +58 424-1619729</p>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="y"></span> CRIPECA · Ingeniería hidráulica y civil · Caracas, Venezuela</footer>
+<a class="flotante" href="https://wa.me/584241619729?text=Hola%20CRIPECA%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n" aria-label="Escribir por WhatsApp">💬</a>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
